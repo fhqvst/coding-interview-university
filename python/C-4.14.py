@@ -58,4 +58,4 @@ class Pin:
         return str(self.stack)
 
 
-TowersOfHanoi(15).solve()
+TowersOfHanoi(31).solve()
