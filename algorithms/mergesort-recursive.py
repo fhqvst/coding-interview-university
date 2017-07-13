@@ -1,16 +1,16 @@
 """
 Take caution.
 This version is about 4000% slower than the one in mergesort.py, partly due to
-the heavy use of the call stack.
+the heavy use of the call stack. It is a PoC more than anything else.
 """
 
 from random import shuffle
 from time import time
 from sys import setrecursionlimit
 
-setrecursionlimit(10003)
-
 N = 10000
+
+setrecursionlimit(N + 3)
 
 A = [ i for i in range(N) ]
 B = list(A)
