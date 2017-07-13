@@ -1,6 +1,6 @@
 """
 Take caution.
-This version is about 4000% slower than the one in mergesort.py, partly due to
+This version is about 4000% slower than the one in mergesort.py, mostly due to
 the heavy use of the call stack. It is a PoC more than anything else.
 """
 
