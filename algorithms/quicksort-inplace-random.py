@@ -1,7 +1,7 @@
-from random import shuffle
+from random import shuffle, randrange
 from time import time
 
-N = 10000
+N = 10
 
 A = [ i for i in range(N) ]
 B = list(A)
@@ -11,7 +11,10 @@ def quick_sort_inplace(S, a, b):
     if a >= b:
         return
 
-    pivot = S[b] # choose last element as pivot
+
+    p = randrange(a, b) # choose random element as pivot
+    S[b], S[p] = S[p], S[b] # swap to last, then same as before
+    pivot = S[b]
     left = a
     right = b - 1
 
@@ -37,4 +40,8 @@ quick_sort_inplace(B, 0, len(B) - 1)
 end = time()
 print(end - start)
 
-assert A == B
+try:
+    assert A == B
+except:
+    print(A)
+    print(B)
